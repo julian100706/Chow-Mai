@@ -467,7 +467,8 @@ p {
 }
 
 .order-form,
-.order-result {
+.order-result,
+.order-confirmation {
     padding: 38px;
     border: 1px solid var(--line);
     border-radius: 5px;
@@ -479,12 +480,14 @@ p {
 }
 
 .order-form-heading .eyebrow,
-.order-result .eyebrow {
+.order-result .eyebrow,
+.order-confirmation .eyebrow {
     margin-bottom: 10px;
 }
 
 .order-form-heading h2,
-.order-result h2 {
+.order-result h2,
+.order-confirmation h2 {
     margin-bottom: 0;
     font-family: var(--serif);
     font-size: 30px;
@@ -560,7 +563,8 @@ p {
     scroll-margin-top: 110px;
 }
 
-.order-result h2 {
+.order-result h2,
+.order-confirmation h2 {
     margin-bottom: 18px;
 }
 
@@ -582,17 +586,58 @@ p {
     gap: 20px;
 }
 
-.order-result-actions .button {
+.order-result-actions .button,
+.new-order-button {
     border: 0;
     cursor: pointer;
     font-family: inherit;
 }
 
-.copy-status {
-    min-height: 1.5em;
-    margin: 14px 0 0;
+.order-edit {
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: var(--brown-dark);
-    font-size: 12px;
+    cursor: pointer;
+    font: 600 12px var(--sans);
+}
+
+.order-confirmation {
+    margin-top: 24px;
+    scroll-margin-top: 110px;
+}
+
+.confirmation-mark {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--sand);
+    color: var(--brown-dark);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.confirmation-note,
+.demo-reference {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.demo-reference {
+    margin: 18px 0;
+}
+
+.demo-reference strong {
+    color: var(--brown-dark);
+    letter-spacing: 0.5px;
+}
+
+.new-order-button {
+    margin-top: 24px;
 }
 
 .site-footer {
@@ -721,7 +766,8 @@ p {
     }
 
     .order-form,
-    .order-result {
+    .order-result,
+    .order-confirmation {
         padding: 28px 22px;
     }
 
