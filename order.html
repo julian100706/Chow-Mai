@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf8f4">
+    <meta name="description" content="Choose your Fresh Bite order and share your delivery details.">
+    <title>Place an Order — Fresh Bite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navigation shell" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Fresh Bite home">Fresh <span>Bite.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="story.html">Our story</a>
+                <a class="nav-contact" href="contact.html">Contact</a>
+                <a class="nav-order" href="order.html" aria-current="page">Order</a>
+                <a class="nav-cta" href="menu.html">Our food <span aria-hidden="true">→</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order-section section shell" aria-labelledby="order-title">
+            <div class="order-intro">
+                <p class="eyebrow">Fresh food is just a few details away</p>
+                <h1 id="order-title">Let's get something <em>delicious.</em></h1>
+                <p>Tell us what you'd like and where to reach you. We'll prepare your order details so you can send them to us on Facebook.</p>
+            </div>
+
+            <form class="order-form" id="order-form">
+                <div class="order-form-heading">
+                    <p class="eyebrow">Your order</p>
+                    <h2>What can we make for you?</h2>
+                </div>
+
+                <div class="order-fields">
+                    <div class="order-field">
+                        <label for="full-name">Full name</label>
+                        <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="order-field">
+                        <label for="contact-number">Contact number</label>
+                        <input id="contact-number" name="contactNumber" type="tel" autocomplete="tel" required>
+                    </div>
+                    <div class="order-field order-field-wide">
+                        <label for="address">Delivery address</label>
+                        <textarea id="address" name="address" rows="3" autocomplete="street-address" required></textarea>
+                    </div>
+                    <div class="order-field">
+                        <label for="food-item">Choose your food</label>
+                        <select id="food-item" name="foodItem" required>
+                            <option value="" selected disabled>Select a menu item</option>
+                            <option value="The Everyday Greens">The Everyday Greens</option>
+                            <option value="The Sunday Bowl">The Sunday Bowl</option>
+                            <option value="A Fresh Start">A Fresh Start</option>
+                        </select>
+                    </div>
+                    <div class="order-field">
+                        <label for="quantity">Number of portions</label>
+                        <input id="quantity" name="quantity" type="number" min="1" max="99" value="1" required>
+                    </div>
+                </div>
+
+                <p class="order-note">No payment is collected on this page. We'll confirm availability and any delivery details when you message us.</p>
+                <button class="button order-submit" type="submit">Prepare my order <span aria-hidden="true">→</span></button>
+            </form>
+
+            <section class="order-result" id="order-result" aria-labelledby="order-result-title" aria-live="polite" hidden>
+                <p class="eyebrow">Your order summary</p>
+                <h2 id="order-result-title" tabindex="-1">Ready to send.</h2>
+                <pre class="order-summary" id="order-summary"></pre>
+                <p class="order-result-note">Copy these details, then message us on Facebook to place your order. Your order is not sent until you contact us.</p>
+                <div class="order-result-actions">
+                    <button class="button" id="copy-order" type="button">Copy order details</button>
+                    <a class="text-link" href="https://www.facebook.com/profile.php?id=61594658811578" target="_blank" rel="noopener noreferrer">Message us on Facebook <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="copy-status" id="copy-status" role="status"></p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content shell">
+            <a class="footer-brand" href="index.html" aria-label="Fresh Bite home">Fresh <span>Bite.</span></a>
+            <p>Fresh food. Good days. Always room for one more.</p>
+            <a href="menu.html">Come find your favorite <span aria-hidden="true">→</span></a>
+        </div>
+    </footer>
+</body>
+</html>
